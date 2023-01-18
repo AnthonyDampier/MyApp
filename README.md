@@ -80,8 +80,8 @@ To get there, here is a checklist of things you can make sure you can do! Show y
 - [x] Make a method (a function inside a class)
   - [x]  Return a value
   - [x]  Call from instance of class
-- [ ] Make an array of objects
-- [ ] Loop over array of objects
+- [x] Make an array of objects
+- [x] Loop over array of objects
 
 
 ## Code Katas

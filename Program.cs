@@ -1,6 +1,10 @@
 ﻿using System;
 using MyNewApp.Utilities;
+using MyNewApp.createObject;
 
+/*
+    MyNewApp is the Lowest level and owns Program, Utilities, and createObject
+*/
 namespace MyNewApp
 {
     class Program
@@ -12,6 +16,11 @@ namespace MyNewApp
             int countLetters = Utility.CountLetters(value);
             Console.WriteLine($"Secret message: {reversedValue}");
             Console.WriteLine($"Message length: {countLetters}");
+
+            Marker newMarker = new Marker("Blue");
+            Console.WriteLine(newMarker.getColor());
+            newMarker.changeColor("Red");
+            Console.WriteLine(newMarker.getColor());
         }
     }
 }
@@ -46,4 +55,30 @@ namespace MyNewApp.Utilities
     }
 }
 
+namespace MyNewApp.createObject
+{
+    class Marker
+    {
+        private string color;
 
+        private int inkLevel;
+
+        public Marker(string colorIn)
+        {
+            this.color = colorIn;
+            this.inkLevel = 100;
+        }
+
+        public void changeColor(string newColor)
+        {
+            if(newColor != null){
+                this.color = newColor;
+            }
+        }
+
+        public string getColor()
+        {
+            return this.color;
+        }
+    }
+}
